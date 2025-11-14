@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Personal Budget Tracker - Frontend
+
+This is the React frontend for Personal Budget Tracker.
+
+## Features
+- Dashboard with charts
+- Transaction management (add/edit/delete)
+- Budget management (add/edit/delete)
+- D3.js charts for visualization
+
+## Installation
+1. Install dependencies: `npm install`
+2. Run project: `npm start`
+
+## Live Demo
+(Add live link here if deployed)
