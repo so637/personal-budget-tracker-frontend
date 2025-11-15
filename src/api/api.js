@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const API_BASE = "http://127.0.0.1:8000";
+//const API_BASE = "http://127.0.0.1:8000";
 
+const API_BASE = process.env.REACT_APP_BACKEND_URL;
 // Create base Axios instance
 const axiosInstance = axios.create({
   baseURL: API_BASE,
@@ -10,7 +11,7 @@ const axiosInstance = axios.create({
   },
 });
 
-// 🔐 Attach access token before each request
+// Attach access token before each request
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("access") || localStorage.getItem("access_token");
@@ -22,7 +23,7 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// 🔄 Handle automatic token refresh when access token expires
+//  Handle automatic token refresh when access token expires
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
